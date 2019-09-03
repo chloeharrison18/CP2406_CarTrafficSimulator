@@ -9,8 +9,8 @@ class RoadTest {
         Road road = new Road();
 
         // Segments
-        int[] roadSegments = road.getSegments();
-        assertArrayEquals(new int [8], roadSegments);
+        int roadSegments = road.getSegmentCount();
+        assertEquals(10, roadSegments);
 
         // Segments length
         int roadLength = road.getSegmentLength();
@@ -26,10 +26,10 @@ class RoadTest {
         Road road = new Road();
 
         // Segments
-        int[] roadSegments = new int[5];
-        road.setSegments(roadSegments);
-        int[] testSegments = road.getSegments();
-        assertArrayEquals(roadSegments, testSegments);
+        int roadSegments = 5;
+        road.setSegmentCount(roadSegments);
+        int testSegments = road.getSegmentCount();
+        assertEquals(roadSegments, testSegments);
 
         // Segments length
         int segmentLength = 4;
