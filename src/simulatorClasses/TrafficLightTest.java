@@ -52,7 +52,6 @@ class TrafficLightTest {
         while (startingSegment != segmentCount) {
             boolean trafficSignal = trafficLight.getSignalToGo();
             startingSegment += 1;
-            trafficLight.changeSignalChance();
             if (trafficSignal == true) {
                 trafficStatus = "go";
                 System.out.println(overallMessage + trafficStatus + ".");
@@ -60,6 +59,7 @@ class TrafficLightTest {
                 trafficStatus = "stop";
                 System.out.println(overallMessage + trafficStatus + ".");
             }
+            trafficLight.changeSignalChance();
         }
     }
 }
