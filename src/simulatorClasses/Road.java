@@ -1,37 +1,27 @@
 package simulatorClasses;
 
 public class Road {
-    private int segmentCount;
-    private int segmentLength;
-    private int segmentBreadth;
+    private int length;
+    private int metres;
 
     public Road() {
-        segmentCount = 10;
-        segmentLength = 2;
-        segmentBreadth = 1;
+        length = 10;
+        metres = length * 2;
     }
 
-    public void setSegmentCount(int segmentCount) {
-        this.segmentCount = segmentCount;
+    public void setLength(int length) {
+        this.length = length;
     }
 
-    public int getSegmentCount() {
-        return segmentCount;
+    public int getLength() {
+        return length;
     }
 
-    public void setSegmentLength(int segmentLength) {
-        this.segmentLength = segmentLength;
+    public void setMetres(int metres) {
+        this.metres = metres;
     }
 
-    public int getSegmentLength() {
-        return segmentLength;
-    }
-
-    public void setSegmentBreadth(int segmentBreadth) {
-        this.segmentBreadth = segmentBreadth;
-    }
-
-    public int getSegmentBreadth() {
-        return segmentBreadth;
+    public int getMetres() {
+        return metres;
     }
 }

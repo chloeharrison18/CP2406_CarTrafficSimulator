@@ -4,43 +4,33 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RoadTest {
-    @Test void initialiser() {
-        // Test constructor values
+    @Test void checkConstructor() {
+        // Test constructor values.
         Road road = new Road();
 
-        // Segments
-        int roadSegments = road.getSegmentCount();
-        assertEquals(10, roadSegments);
+        // Length
+        int roadLength = road.getLength();
+        assertEquals(10, roadLength);
 
-        // Segments length
-        int roadLength = road.getSegmentLength();
-        assertEquals(2, roadLength);
-
-        // Segments Breadth
-        int roadBreadth = road.getSegmentBreadth();
-        assertEquals(1, roadBreadth);
+        // Metres
+        int roadMetres = road.getMetres();
+        assertEquals(20, roadMetres);
     }
 
-    @Test void testMethods() {
-        // Test setter and getter methods
+    @Test void basicTest() {
+        // Test setter and getter methods.
         Road road = new Road();
 
-        // Segments
-        int roadSegments = 5;
-        road.setSegmentCount(roadSegments);
-        int testSegments = road.getSegmentCount();
-        assertEquals(roadSegments, testSegments);
+        // Length
+        int roadLength = 5;
+        road.setLength(roadLength);
+        int testLength = road.getLength();
+        assertEquals(roadLength, testLength);
 
-        // Segments length
-        int segmentLength = 4;
-        road.setSegmentLength(segmentLength);
-        int testSegmentLength = road.getSegmentLength();
-        assertEquals(segmentLength, testSegmentLength);
-
-        // Segments breadth
-        int segmentBreadth = 3;
-        road.setSegmentBreadth(segmentBreadth);
-        int testSegmentBreadth = road.getSegmentBreadth();
-        assertEquals(segmentBreadth, testSegmentBreadth);
+        // Metres
+        int roadMetres = 4;
+        road.setMetres(roadMetres);
+        int testMetres = road.getMetres();
+        assertEquals(roadMetres, testMetres);
     }
 }
