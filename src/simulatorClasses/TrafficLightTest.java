@@ -1,7 +1,6 @@
 package simulatorClasses;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class TrafficLightTest {
@@ -11,6 +10,10 @@ class TrafficLightTest {
         */
         Road road = new Road();
         TrafficLight trafficLight = new TrafficLight(road);
+
+        //Road
+        Road currentRoad = trafficLight.getRoad();
+        assertEquals(road, currentRoad);
 
         // Position
         int trafficLightPosition = trafficLight.getPosition();
@@ -24,7 +27,13 @@ class TrafficLightTest {
     @Test void basicTest() {
         // Test setter and getter methods.
         Road road = new Road();
+        Road road2 = new Road();
         TrafficLight trafficLight = new TrafficLight(road);
+
+        // Road
+        trafficLight.setRoad(road2);
+        Road currentRoad = trafficLight.getRoad();
+        assertEquals(road2, currentRoad);
 
         // Position
         int setPosition = road.getLength();
@@ -55,7 +64,8 @@ class TrafficLightTest {
             if (trafficSignal == true) {
                 trafficStatus = "go";
                 System.out.println(overallMessage + trafficStatus + ".");
-            } else {
+            }
+            else {
                 trafficStatus = "stop";
                 System.out.println(overallMessage + trafficStatus + ".");
             }

@@ -11,6 +11,10 @@ public class TrafficLight {
         signalToGo = true;
     }
 
+    public void setRoad(Road road) {this.road = road;}
+
+    public Road getRoad() { return road;}
+
     public void setPosition(int position) { this.position = position; }
 
     public int getPosition() {
@@ -28,11 +32,9 @@ public class TrafficLight {
     public void changeSignalChance() {
         double changeRate = 0.3;
         double chance = Math.random();
-        if (chance < changeRate) {
+        if (chance < changeRate)
             signalToGo = !signalToGo;
-        }
-        else  {
+        else
             signalToGo = signalToGo;
-        }
     }
 }
