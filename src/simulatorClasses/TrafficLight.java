@@ -1,14 +1,13 @@
 package simulatorClasses;
 
-import java.util.Random;
-
 public class TrafficLight {
-    private Random random;
+    Road road;
     private int position;
     private boolean signalToGo;
 
-    public TrafficLight(int roadSegment) {
-        position = roadSegment;
+    public TrafficLight(Road givenRoad) {
+        road = givenRoad;
+        position = road.getLength();
         signalToGo = true;
     }
 

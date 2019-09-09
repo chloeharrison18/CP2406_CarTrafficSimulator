@@ -10,7 +10,7 @@ class TrafficLightTest {
         A road object is initialised where the last road segment is set to be the traffic light's position.
         */
         Road road = new Road();
-        TrafficLight trafficLight = new TrafficLight(road.getLength());
+        TrafficLight trafficLight = new TrafficLight(road);
 
         // Position
         int trafficLightPosition = trafficLight.getPosition();
@@ -24,7 +24,7 @@ class TrafficLightTest {
     @Test void basicTest() {
         // Test setter and getter methods.
         Road road = new Road();
-        TrafficLight trafficLight = new TrafficLight(road.getLength());
+        TrafficLight trafficLight = new TrafficLight(road);
 
         // Position
         int setPosition = road.getLength();
@@ -42,7 +42,7 @@ class TrafficLightTest {
     @Test void checkChangingSignal() {
         // Test random change of stop and go (boolean true or false) by counting down each road segment.
         Road road = new Road();
-        TrafficLight trafficLight = new TrafficLight(road.getLength());
+        TrafficLight trafficLight = new TrafficLight(road);
 
         int segmentCount = road.getLength();
         int startingSegment = 1;
