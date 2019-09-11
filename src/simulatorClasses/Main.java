@@ -21,9 +21,8 @@ public class Main {
                         "Car Position: 9, Road: 1");
                 secondRoad(car, carPosition, endOfRoad2);
             }
-            else if (carPosition == 6 && trafficSignal == false) {
-                carPosition = carPosition;;
-            }
+            else if (carPosition == 6 && trafficSignal == false)
+                carPosition = carPosition;
             else
                 car.drive();
                 carPosition = car.getPosition();
