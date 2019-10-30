@@ -4,13 +4,49 @@ import javax.swing.*;
 import java.awt.*;
 
 public class CarRectangle extends JPanel {
+    private Timer timer;
+    private final int WIDTH = 50, HEIGHT = 35;
+    private int x;
+    private int y;
+
+    public CarRectangle(int xCoordinate, int yCoordinate) {
+        x = xCoordinate;
+        y = yCoordinate;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    @Override
+    public int getX() {
+        return x;
+    }
+
+    @Override
+    public int getY() {
+        return y;
+    }
+
     @Override
     public void paintComponent(Graphics gr) {
         super.paintComponent(gr);
-        int x = 200;
-        int y = 200;
-        final int WIDTH = 100, HEIGHT = 80;
         gr.setColor(Color.RED);
         gr.fillRect(x, y, WIDTH, HEIGHT);
     }
+
+    public void move() {
+        timer = new Timer(1000, e -> {
+            x += 50;
+            repaint();
+        });
+        timer.start();
+    }
+
+    // use class x y coordinates to set coordinates for simulator. add the movement within the loops in main
+    // figure out how to make multiple road shapes at a time depending on segments
 }
