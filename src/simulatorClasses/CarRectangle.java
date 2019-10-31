@@ -46,7 +46,4 @@ public class CarRectangle extends JPanel {
         });
         timer.start();
     }
-
-    // use class x y coordinates to set coordinates for simulator. add the movement within the loops in main
-    // figure out how to make multiple road shapes at a time depending on segments
 }
