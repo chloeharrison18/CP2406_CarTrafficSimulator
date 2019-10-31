@@ -4,12 +4,17 @@ import javax.swing.*;
 import java.awt.*;
 
 public class RoadRectangle extends JPanel {
+    private final int WIDTH = 500, HEIGHT = 50;
+    private int x;
+    private int y;
+
+    public RoadRectangle(int xCoordinate, int yCoordinate) {
+        x = xCoordinate;
+        y = yCoordinate;
+    }
     @Override
     public void paintComponent(Graphics gr) {
         super.paintComponent(gr);
-        int x = 200;
-        int y = 200;
-        final int WIDTH = 100, HEIGHT = 100;
         gr.setColor(Color.DARK_GRAY);
         gr.fillRect(x, y, WIDTH, HEIGHT);
     }
