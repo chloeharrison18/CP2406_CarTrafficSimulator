@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RoadRectangleTest {
     public static void main(String[] args) {
+        // Test displaying the rectangle.
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(new RoadRectangle(100, 100));

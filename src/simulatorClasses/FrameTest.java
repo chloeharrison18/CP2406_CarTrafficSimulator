@@ -4,6 +4,7 @@ import javax.swing.*;
 
 class FrameTest {
     public static void main(String[] args) {
+        // Test running the frame.
         Frame frame = new Frame();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

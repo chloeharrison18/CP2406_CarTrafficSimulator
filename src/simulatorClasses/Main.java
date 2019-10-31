@@ -10,11 +10,6 @@ public class Main {
         TrafficLight trafficLight = new TrafficLight(road);
         Car car = new Car(road);
 
-        int endOfRoad = road.getLength();
-        int endOfRoad2 = road2.getLength();
-        int carPosition = car.getPosition();
-        boolean trafficSignal = trafficLight.getSignalToGo();
-
         // Set up GUI components.
         Frame frame = new Frame();
         frame.setLocationRelativeTo(null);
@@ -31,12 +26,21 @@ public class Main {
         frame.add(carRectangle);
         frame.pack();
 
-        firstRoad(road2, trafficLight, car, endOfRoad, endOfRoad2, carPosition, trafficSignal, carRectangle);
+        // Start the simulator car driving.
+        firstRoad(road, road2, trafficLight, car, carRectangle);
 
     }
 
-    public static void firstRoad(Road road2, TrafficLight trafficLight, Car car, int endOfRoad, int endOfRoad2, int carPosition, boolean trafficSignal, CarRectangle carRectangle) throws InterruptedException {
-        // Drive car on first road.
+    public static void firstRoad(Road road, Road road2, TrafficLight trafficLight, Car car, CarRectangle carRectangle) throws InterruptedException {
+        // Drive car on the first road.
+
+        // Set up variables.
+        int endOfRoad = road.getLength();
+        int endOfRoad2 = road2.getLength();
+        int carPosition = car.getPosition();
+        boolean trafficSignal = trafficLight.getSignalToGo();
+
+        // Drive car. Loops until the car reaches the end of the last road segment.
         while (carPosition != endOfRoad) {
             System.out.println("Car Position: " + carPosition + ", Road: 1");
             if (carPosition == 6 && trafficSignal == true) {
@@ -45,6 +49,7 @@ public class Main {
                 System.out.println("Car Position: 7, Road: 1\n" +
                         "Car Position: 8, Road: 1\n" +
                         "Car Position: 9, Road: 1");
+                // The car moves onto the next road at the end of the loop.
                 secondRoad(car, endOfRoad2, carRectangle);
             }
             else if (carPosition == 6 && trafficSignal == false)
@@ -61,10 +66,13 @@ public class Main {
     }
 
     public static void secondRoad(Car car, int endOfRoad2, CarRectangle carRectangle) throws InterruptedException {
-        // Drive car on second road.
+        // Drive car on the second road.
+
+        // Set up variables.
         car.setPosition(0);
         int carPosition = car.getPosition();
 
+        // Drive car.
         while (carPosition != endOfRoad2) {
             System.out.println("Car Position: " + carPosition + ", Road: 2");
             car.drive();
