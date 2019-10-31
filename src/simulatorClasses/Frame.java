@@ -10,7 +10,7 @@ public class Frame extends JFrame implements ActionListener {
     private JMenuItem about;
     private JMenuItem exit;
 
-    Frame() {
+    public Frame() {
         super("Car Simulator");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -44,11 +44,11 @@ public class Frame extends JFrame implements ActionListener {
         repaint();
     }
 
-    void addExitActionListener(ActionListener listener) {
+    public void addExit(ActionListener listener) {
         exit.addActionListener(listener);
     }
 
-    void addAboutActionListener(ActionListener listener) {
+    public void addAbout(ActionListener listener) {
         about.addActionListener(listener);
     }
 
