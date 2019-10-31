@@ -28,6 +28,7 @@ public class Main {
                 carPosition = car.getPosition();
                 trafficLight.changeSignalChance();
                 trafficSignal = trafficLight.getSignalToGo();
+                trafficLight.signalColour();
         }
 
     }

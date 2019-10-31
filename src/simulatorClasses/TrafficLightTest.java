@@ -72,4 +72,13 @@ class TrafficLightTest {
             trafficLight.changeSignalChance();
         }
     }
+
+    @Test void checkSignalColour() {
+        // Test output for traffic light colour (true is green, false is red).
+        Road road = new Road();
+        TrafficLight trafficLight = new TrafficLight(road);
+        trafficLight.signalColour();
+        trafficLight.setSignalToGo(false);
+        trafficLight.signalColour();
+    }
 }

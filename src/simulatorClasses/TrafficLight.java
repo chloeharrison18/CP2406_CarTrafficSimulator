@@ -37,4 +37,12 @@ public class TrafficLight {
         else
             signalToGo = signalToGo;
     }
+
+    public void signalColour() {
+        String message = "The traffic light is ";
+        if (signalToGo == false)
+            System.out.println(message + "red.");
+        else
+            System.out.println(message + "green.");
+    }
 }
