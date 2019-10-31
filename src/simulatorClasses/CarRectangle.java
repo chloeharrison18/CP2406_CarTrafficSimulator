@@ -41,7 +41,7 @@ public class CarRectangle extends JPanel {
 
     public void move() {
         timer = new Timer(1000, e -> {
-            x += 50;
+            x += 10;
             repaint();
         });
         timer.start();
